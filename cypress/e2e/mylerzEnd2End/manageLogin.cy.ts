@@ -14,5 +14,7 @@ describe('Manage Login', () =>
         login.userNameInput().type('hubsuper');
         login.passwordInput().type('P@ssw0rd');
         login.loginButton().click();
+        cy.location('pathname').should('eq', '/pickup');
     });
+
 });
