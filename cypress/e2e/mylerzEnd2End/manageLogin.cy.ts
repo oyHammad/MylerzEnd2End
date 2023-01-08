@@ -1,8 +1,8 @@
 /// <reference types = "Cypress"/>
 
-import { config } from "cypress/types/bluebird";
+import { Login } from "../../support/modules/login/login";
 
-1;
+const login = new Login;
 describe('Manage Login', () =>
 {
     beforeEach(() =>
@@ -11,8 +11,8 @@ describe('Manage Login', () =>
     });
     it('Valadate mylerz portal login using valid userName and password', () =>
     {
-        cy.get('#userName').type('hubsuper');
-        cy.get('#password').type('P@ssw0rd');
-        cy.contains('button', 'Login').click();
+        login.userNameInput().type('hubsuper');
+        login.passwordInput().type('P@ssw0rd');
+        login.loginButton().click();
     });
 });
