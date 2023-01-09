@@ -8,6 +8,7 @@ describe('Manage Login', () =>
     beforeEach(() =>
     {
         cy.visit('/');
+
     });
     it('Valadate mylerz portal login using valid userName and password', () =>
     {
@@ -15,5 +16,6 @@ describe('Manage Login', () =>
         login.passwordInput().type('P@ssw0rd');
         login.loginButton().click();
         cy.location('pathname').should('eq', '/pickup');
+
     });
 });
