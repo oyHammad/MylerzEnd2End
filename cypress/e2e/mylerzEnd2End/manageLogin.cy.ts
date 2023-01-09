@@ -16,5 +16,4 @@ describe('Manage Login', () =>
         login.loginButton().click();
         cy.location('pathname').should('eq', '/pickup');
     });
-
 });
