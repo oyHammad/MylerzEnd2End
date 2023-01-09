@@ -9,7 +9,6 @@ describe('Manage mylerz portal Login', () =>
     beforeEach(() =>
     {
         cy.visit('/');
-
     });
     it('Valadate mylerz portal login using valid userName and password', { tags: '@somke' }, () =>
     {
