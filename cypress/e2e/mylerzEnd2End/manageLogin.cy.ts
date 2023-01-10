@@ -11,7 +11,7 @@ describe('Manage mylerz portal Login', () =>
         cy.visit('/');
 
     });
-    it('Valadate mylerz portal login using valid userName and password', { tags: '@somke' }, () =>
+    it('Valadate mylerz portal login using valid userName and password', () =>
     {
         login.userNameInput().should('be.enabled').type(Cypress.env('userName'));
         login.passwordInput().should('be.enabled').type(Cypress.env('password'));
