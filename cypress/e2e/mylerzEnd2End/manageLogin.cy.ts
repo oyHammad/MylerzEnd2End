@@ -12,7 +12,7 @@ describe('Manage mylerz portal Login', () =>
     });
     it('Valadate mylerz portal login using valid userName and password', { tags: "@smoke" }, () =>
     {
-        login.userNameInput().should('be.enabled').type(Cypress.env('userNam'));
+        login.userNameInput().should('be.enabled').type(Cypress.env('userName'));
         login.passwordInput().should('be.enabled').type(Cypress.env('password'));
         login.loginButton().should('be.visible').click();
         cy.location('pathname').should('eq', '/pickup');
@@ -31,7 +31,7 @@ describe('Manage mylerz portal Login', () =>
         login.loginButton().should('be.visible').click();
         login.alertMessage().should('contain', 'Invalid username or password');
     });
-    it('Validate mylerz portal login without userName and password', { tags: "@smoke" }, () =>
+    it('Validate mylerz portal login without userName and password', () =>
     {
         login.userNameInput().should('be.enabled').clear();
         login.passwordInput().should('be.enabled').clear();

@@ -41,3 +41,12 @@ Cypress.on('uncaught:exception', (err, runnable) =>
     // failing the test
     return false;
 });
+
+Cypress.Commands.add('Login', (userName: string, password: string) =>
+{
+    cy.visit('https://test.egypt.mylerz.com/login');
+    cy.get('#userName').type(userName);
+    cy.get('#password').type(password);
+    cy.contains('button', 'Login').click();
+    cy.location('pathname').should('eq', '/pickup');
+});
