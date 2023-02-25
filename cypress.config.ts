@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: "e81fnc",
   e2e: {
 
     env: {
@@ -23,5 +24,6 @@ export default defineConfig({
       return config;
       // implement node event listeners here
     },
+    watchForFileChanges: false
   },
 });

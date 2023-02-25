@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -50,3 +52,13 @@ Cypress.Commands.add('Login', (userName: string, password: string) =>
     cy.contains('button', 'Login').click();
     cy.location('pathname').should('eq', '/pickup');
 });
+Cypress.Commands.add("getByPlaceholder", (input: string) =>
+{
+    /**
+ * Get DOM element based on placeholder text value
+ * @param input placeholder text value
+ */
+    return cy.get(`[placeholder="${input}"]`);
+});
+
+import 'cypress-file-upload';

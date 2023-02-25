@@ -2,6 +2,8 @@ declare namespace Cypress
 {
     interface Chainable
     {
-        Login: (userNam: string, password: string) => void;
+        Login: (userName: string, password: string) => void;
+        getByPlaceholder(input: string): Chainable<any>;
+
     }
 }
