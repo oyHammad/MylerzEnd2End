@@ -15,3 +15,8 @@ export function generateRandomstring(prefix: string)
         + leftpad(`${date.getSeconds()}`, 2)
         + leftpad(`${date.getMilliseconds()}`, 3);
 }
+export function generateRandamEmail()
+{
+    const chars = 'abcdefghijklmnopqrstuvwxyz';
+    return chars[Math.floor(Math.random() * 26)] + Math.random().toString(36).substring(2, 11) + '@domain.com';
+}
