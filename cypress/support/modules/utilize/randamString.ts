@@ -20,3 +20,9 @@ export function generateRandamEmail()
     const chars = 'abcdefghijklmnopqrstuvwxyz';
     return chars[Math.floor(Math.random() * 26)] + Math.random().toString(36).substring(2, 11) + '@domain.com';
 }
+
+export function generateRandomNationalID()
+{
+    const baseNationalID: string = "2851212";
+    return baseNationalID + Math.floor((Math.random() * 10000000) + 1);
+}

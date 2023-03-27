@@ -503,10 +503,12 @@ describe('Manage create and edit pickup order', () =>
             pickupOrders.alertBody().should('have.length', 6);
         });
     });
-    describe('Manage create and edit pickup order useing upload button', () =>
+    describe.only('Manage create and edit pickup order useing upload button', () =>
     {
-        it('Upload and edit delivery same day "Door To Door" pickup order', { tags: "@smoke" }, () =>
+        it.only('Upload and edit delivery same day "Door To Door" pickup order', { tags: "@smoke" }, () =>
         {
+            cy.intercept('POST', '/api/pickupOrder/SavePickupOrder').as('uploadPickup');
+
             const fileName = "delivery same day DoorToDoor.xlsx";
             const filePath = "delivery same day DoorToDoor.xlsx";
             const merchantName: string = "End2EndMerchant";

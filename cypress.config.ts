@@ -8,7 +8,9 @@ export default defineConfig({
       userName: 'hubsuper',
       password: 'P@ssw0rd',
       invalidUserName: 'Test',
-      invalidPassword: 'Test@123'
+      invalidPassword: 'Test@123',
+      userPassword: 'Ot@123456',
+      userConfirmPassword: 'Ot@123456'
     },
     viewportWidth: 1366,
     viewportHeight: 768,

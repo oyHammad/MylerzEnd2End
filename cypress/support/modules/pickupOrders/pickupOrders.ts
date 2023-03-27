@@ -14,8 +14,8 @@ export class PickupOrders
     public filterButton = () => cy.get('.filter-btn');
     public searchRow = () => cy.get('#mainSearch');
     public fromDateInput = () => cy.get('[placeholder="Select a Date"]');
-    public toDateinput = () => cy.get('body > app-root > div.container-fluid > div > div.col-sm-10.main-body > div > div > pickup > app-pickup-list > div.col-12.table-holder.card > div.fillter-div > div:nth-child(3) > div:nth-child(3) > date-picker > div > input');
-    public searchButton = () => cy.get('body > app-root > div.container-fluid > div > div.col-sm-10.main-body > div > div > pickup > app-pickup-list > div.col-12.page-header > search-component > div > i');
+    public toDateinput = () => cy.get('body > app-root > div.container-fluid.m-0 > div > div.main-content > pickup > app-pickup-list > div.col-12.table-holder.card > div.fillter-div > div.row.align-normal > div:nth-child(3) > date-picker > div > input');
+    public searchButton = () => cy.get('.search-parent > .fa');
     public optionMenu = () => cy.get('#button-basic');
     public editButton = () => cy.get('.dropdown-item');
     public uploadButton = () => cy.get('.header_options > :nth-child(1) > .mb-0');

@@ -27,3 +27,6 @@ import './commands';
 // @ts-ignore
 import registerCypressGrep from '@cypress/grep';
 registerCypressGrep();
+import 'cypress-plugin-steps';
+// or
+require('cypress-plugin-steps');

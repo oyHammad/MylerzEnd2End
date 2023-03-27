@@ -2,7 +2,7 @@
 
 import { AddMerchant } from "../../support/modules/merchant/addMerchant";
 import { EditMerchant } from "../../support/modules/merchant/editMerchant";
-import { Merchants } from "../../support/modules/merchant/merchant";
+import { Merchants } from "../../support/modules/merchant/merchants";
 import { generateRandamEmail, generateRandomstring } from "../../support/modules/utilize/randamString";
 
 const merchants = new Merchants();
