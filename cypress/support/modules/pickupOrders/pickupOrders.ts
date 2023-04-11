@@ -19,4 +19,8 @@ export class PickupOrders
     public optionMenu = () => cy.get('#button-basic');
     public editButton = () => cy.get('.dropdown-item');
     public uploadButton = () => cy.get('.header_options > :nth-child(1) > .mb-0');
+    public dueDateInput = () => cy.get('.caltable>tbody>tr>td').then(($el) =>
+    {
+        return ($el.filter('td.daycell.currmonth.tablesingleday').eq(0));
+    });
 }

@@ -62,3 +62,4 @@ Cypress.Commands.add("getByPlaceholder", (input: string) =>
 });
 
 import 'cypress-file-upload';
+import 'cypress-map';

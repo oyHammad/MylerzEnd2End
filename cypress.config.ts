@@ -22,10 +22,17 @@ export default defineConfig({
 
     setupNodeEvents(on, config)
     {
+
+      // const version = config.env.version || 'StagingTunisia';
+      // // load env from json
+      // config.env = require(`./cypress/config/${version}.json`);
+      // // change baseUrl
+      // config.baseUrl = config.env.baseUrl;
+
       require('@cypress/grep/src/plugin')(config);
       return config;
       // implement node event listeners here
     },
-    watchForFileChanges: false
+    watchForFileChanges: true
   },
 });
