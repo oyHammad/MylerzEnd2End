@@ -23,7 +23,7 @@ describe('Manage Resources', () =>
     {
         cy.Login(Cypress.env('userName'), Cypress.env('password'));
     });
-    it('Validate create and edit new staff member', () =>
+    it('Validate create and edit new staff member', { tags: "@smoke" }, () =>
     {
         cy.step('Open Resources module');
         sideMenu.ResourcesButton().should('be.visible').click();
