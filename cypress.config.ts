@@ -17,7 +17,7 @@ export default defineConfig({
     baseUrl: 'https://test.egypt.mylerz.com/login',
     retries: {
       "runMode": 2,
-      "openMode": 2
+      "openMode": 0
     },
 
     setupNodeEvents(on, config)
