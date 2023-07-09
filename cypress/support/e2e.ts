@@ -30,3 +30,4 @@ registerCypressGrep();
 import 'cypress-plugin-steps';
 // or
 require('cypress-plugin-steps');
+import 'cypress-recurse/commands';

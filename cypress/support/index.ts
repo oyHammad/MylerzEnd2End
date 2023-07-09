@@ -4,6 +4,6 @@ declare namespace Cypress
     {
         Login: (userName: string, password: string) => void;
         getByPlaceholder(input: string): Chainable<any>;
-
+        addNewStaff: () => void;
     }
 }

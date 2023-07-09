@@ -7,5 +7,8 @@ export class Resources
     public searchButton = () => cy.get('search-component > div > i');
     public ellipseButton = () => cy.get('#button-basic');
     public editButton = () => cy.get(':nth-child(1) > .dropdown-item');
+    public activeButton = () => cy.get(':nth-child(2) > .dropdown-item');
+    public confirmDeactivateStaff = () => cy.get('[value="Yes"]');
+    public deactivateButton = () => cy.get('.dropdown-menu > :nth-child(2) > .dropdown-item');
 
 }
